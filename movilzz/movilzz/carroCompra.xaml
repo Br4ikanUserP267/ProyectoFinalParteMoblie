@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="movilzz.carroCompra">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="SelectedBooksListView"
+                      ItemsSource="{Binding SelectedBooks}"
+                      SeparatorVisibility="Default"
+                      SeparatorColor="LightGray"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Nombre}" FontSize="16" FontAttributes="Bold" />
+                                <Label Text="{Binding Autores}" FontSize="14" />
+                                <Label Text="{Binding Resumen}" FontSize="14" />
+                                <Image HeightRequest="100" WidthRequest="200"
+                                       Source="{Binding ImagenCargada}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <Button Text="Enviar" Clicked="OnEnviarClicked" HorizontalOptions="CenterAndExpand" Margin="20" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

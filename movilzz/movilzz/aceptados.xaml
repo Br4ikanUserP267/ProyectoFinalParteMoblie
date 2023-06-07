@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="movilzz.aceptados">
+    <ContentPage.Content>
+        <ListView x:Name="PrestamosListView" ItemSelected="OnPrestamoSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding nombre_libro}" FontAttributes="Bold" />
+                            <ProgressBar Progress="{Binding Progreso}" />
+                            <Label Text="{Binding FechaFinalFormato, StringFormat='Fecha final: {0:dd/MM/yyyy}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>

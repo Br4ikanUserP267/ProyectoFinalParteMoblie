@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             x:Class="movilzz.izquierda">
+
+    <ScrollView>
+        <Frame CornerRadius="100"
+           HorizontalOptions="Center"
+           BackgroundColor="#E1E1E1">
+
+            <StackLayout>
+                
+            <Grid ColumnDefinitions="Auto,Auto">
+                <StackLayout BackgroundColor="#E1E1E1">
+
+                    <Frame
+                        CornerRadius="50"
+                        BackgroundColor="#c2c2c2"
+                        HeightRequest="300"
+                        WidthRequest="200">
+                            <Image x:Name="FotoMateo" HeightRequest="1000" WidthRequest="200" Margin="0,0,10,0"
+                               Source="{Binding estudiante.foto, StringFormat='http://localhost/proyectoFinal/api/{0}'}" />
+
+
+                        </Frame>
+
+
+
+
+                    <Label TextColor="Black"
+                       FontFamily="Arial"
+                       FontSize="30"
+                       TextTransform="Uppercase"
+                       FontAttributes="Bold">
+
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="&#x0a;" />
+                                <Span x:Name="SpnNombre"/>
+                                <Span Text="&#x0a;" />
+                                <Span x:Name="SpnApellido"
+                                  FontAttributes="Bold"
+                                  FontSize="30"/>
+                                <Span Text="&#x0a;" />
+
+                            </FormattedString>
+
+                        </Label.FormattedText>
+
+                    </Label>
+
+                    <!--/toca hacer join pa extraer el programa o carrera hppppps sii mrk jajajajajajue monda, deja estos comentarios aqui, que el profe los lea.jajaja-->
+                    <!--sin mosyrar el programa cole suerte-->
+                    <!-- jajaja-->
+                    <!-- que monda y ahora me mandaron a comprar TOCA CONECTARSE A LA APIDE DONDE SE ALMACENA EL PROGRAMA??-->
+                    <Label x:Name="LblCarrera"
+                       TextColor="Black"
+                       FontFamily="criticized"
+                       FontAttributes="Bold"
+                       CharacterSpacing="5"
+                       FontSize="13"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="&#x0a;" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <FlexLayout JustifyContent="Start">
+                        <Label TextColor="Black"
+                           FontFamily="criticized"
+                           FontSize="Medium">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span x:Name="SpnTipoIdentificacion" 
+                                      Text=""
+                                      FontAttributes="Bold"
+                                      FontSize="14"/>
+
+                                    <Span x:Name="SpnNumeroIdentificacion" 
+                                      FontSize="13"
+                                      FontFamily="Arial"/>
+                                    <Span Text="  |  GS:" 
+                                      FontSize="13"
+                                      FontFamily="criticized"
+                                      FontAttributes="Bold"/>
+                                    <Span x:Name="SpnTipoSangre" 
+                                      Text=""
+                                      FontSize="13">
+
+
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label TextColor="Black"
+                           FontFamily="Arial"
+                           FontSize="Medium">
+
+                        </Label>
+                    </FlexLayout>
+
+
+                    <Image Source="logo_cecar"
+                       HeightRequest="90"
+                       WidthRequest="190"
+                       HorizontalOptions="Center"
+                       Margin="10,30"/>
+
+                </StackLayout>
+
+            </Grid>
+
+                <FlexLayout JustifyContent="Start">
+                    <Label TextColor="Black"
+                           FontFamily="criticized"
+                           FontSize="Medium">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="DIRECCION: "
+                                      FontAttributes="Bold"
+                                      FontSize="14"/>
+                                <Span Text=" "
+                                      x:Name="SpnDireccion"
+                                      FontSize="14"
+                                      FontFamily="Arial"/>
+                                <Span Text="&#x0a;" />
+
+
+
+
+                                <Span Text="&#x0a;" />
+                                <Span Text="NUMERO DE CONTACTO: " 
+                                      FontSize="14"
+                                      FontFamily="criticized"
+                                      FontAttributes="Bold"/>
+                                <Span Text=""
+                                      x:Name="SpnTelefono"
+                                      FontSize="14"/>
+
+                                <Span Text="&#x0a;" />
+                                <Span Text="&#x0a;" />
+
+                                <Span Text="CORREO ELECTRONICO: " 
+                                      FontSize="14"
+                                      x:Name="SpnCorreo"
+                                      FontAttributes="Bold"
+                                      FontFamily="Arial"/>
+                                <Span Text="" 
+                                      FontSize="14"
+                                      FontFamily="Arial"/>
+
+
+                                <Span Text="&#x0a;" />
+                                <Span Text="&#x0a;" />
+                                
+
+
+
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label TextColor="Black"
+                           FontFamily="Arial"
+                           FontSize="Medium">
+
+                    </Label>
+                </FlexLayout>
+                <zxing:ZXingBarcodeImageView BarcodeValue="{Binding BarcodeValue}" WidthRequest="200" HeightRequest="100"/>
+                <Button Text="Ver libros " Clicked="OnButtonClicked"
+        BackgroundColor="#6c757d"
+        TextColor="White"
+        FontSize="16"
+        CornerRadius="5"
+        Padding="10, 5"
+        Margin="10"
+        HorizontalOptions="Center" />
+
+
+            </StackLayout>
+
+
+        </Frame>
+
+
+    </ScrollView>
+       
+</ContentPage>
+    

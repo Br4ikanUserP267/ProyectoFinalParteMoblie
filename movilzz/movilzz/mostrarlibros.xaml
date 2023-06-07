@@ -1,0 +1,53 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="movilzz.mostrarlibros">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="BookTemplate">
+            <ViewCell>
+                <StackLayout Padding="10">
+                    <Label Text="{Binding Nombre}" FontSize="16" FontAttributes="Bold" />
+                    <Label Text="{Binding Autores}" FontSize="14" />
+                    <Label Text="{Binding Resumen}" FontSize="14" />
+                    
+                    <Image x:Name="FotoLibro" HeightRequest="100" WidthRequest="200" Margin="0,0,10,0"
+                           Source="{Binding ImagenCargada}" />
+                    <Label Text="numero unidades disponibles"></Label>
+                    <Label Text="{Binding NumeroUnidades}" FontSize="14" />
+                    <Button Text="Añadir" Clicked="OnAddClicked">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="BackgroundColor" Value="Green" />
+                                <Setter Property="TextColor" Value="White" />
+                                <Setter Property="BorderColor" Value="Green" />
+                                <Setter Property="BorderWidth" Value="1" />
+                                <Setter Property="CornerRadius" Value="5" />
+                                <Setter Property="Padding" Value="10,5" />
+                                <Setter Property="FontSize" Value="Small" />
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <!-- Agrega más etiquetas para mostrar otros datos del libro si es necesario -->
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Button Text="Pedir"   Clicked="irAlcarro"/>
+            
+            
+            <Button Text="Pendientes "   Clicked="irAPendientes"/>
+            
+            <Button Text="Aceptados  "   Clicked="irAceptados"/>
+
+            <SearchBar x:Name="SearchBar" Placeholder="Buscar libros" SearchButtonPressed="OnSearchButtonPressed" />
+
+            <ListView x:Name="BooksListView"
+                      ItemTemplate="{StaticResource BookTemplate}"
+                      SeparatorVisibility="Default"
+                      SeparatorColor="LightGray"
+                      HasUnevenRows="True" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

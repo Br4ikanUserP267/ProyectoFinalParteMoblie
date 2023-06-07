@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="movilzz.Login">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center"
+           HorizontalOptions="Center"
+                     Spacing="15">
+            <Image Source="cecar.png"
+                   WidthRequest="300"
+                   HeightRequest="300"
+                   BackgroundColor="Transparent"/>
+            <Label Text="INICIAR SESIÓN"
+               FontSize="30"
+               TextColor="White"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+            <BoxView BackgroundColor="White"
+                 HeightRequest="1"></BoxView>
+            <BoxView></BoxView>
+            <Label Text="* CAMPOS REQUERIDOS"
+               FontSize="15"
+               TextColor="White"/>
+            <Entry x:Name="usuario"
+               Placeholder="Usuario *"
+               PlaceholderColor="#AAB7B8"
+               BackgroundColor="White"
+                   TextColor="Black"></Entry>
+            <Entry x:Name="contraseña"
+                   Placeholder="Contraseña *"
+                   PlaceholderColor="#AAB7B8"
+                   BackgroundColor="White"
+                   IsPassword="True"
+                   TextColor="Black"></Entry>
+            <Button Text="Iniciar sesión"
+                BackgroundColor="#1E8449"
+                WidthRequest="100"
+                HeightRequest="50"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

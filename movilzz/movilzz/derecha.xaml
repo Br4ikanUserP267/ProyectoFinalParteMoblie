@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="movilzz.derecha">
+    <ContentPage.Content>
+
+
+        <Frame CornerRadius="100"
+           HorizontalOptions="Center"
+           BackgroundColor="#E1E1E1">
+            <Grid ColumnDefinitions="Auto,Auto">
+                <StackLayout BackgroundColor="#E1E1E1">
+
+                    <Frame
+                        CornerRadius="50"
+                        BackgroundColor="#90EE90"
+                        HeightRequest="300"
+                        WidthRequest="200">
+                        
+                        
+                    </Frame>
+
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="&#x0a;" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <FlexLayout JustifyContent="Start">
+                        <Label TextColor="Black"
+                           FontFamily="criticized"
+                           FontSize="Medium">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="DIRECCION: "
+                                      FontAttributes="Bold"
+                                      FontSize="14"/>
+                                    <Span Text="Carrera 39 Cll 10-21 Margaritas " 
+                                      FontSize="14"
+                                      FontFamily="Arial"/>
+                                    <Span Text="&#x0a;" />
+
+
+
+                                    
+                                    <Span Text="&#x0a;" />
+                                    <Span Text="NUMERO DE CONTACTO: " 
+                                      FontSize="14"
+                                      FontFamily="criticized"
+                                      FontAttributes="Bold"/>
+                                    <Span Text="3132412356"
+                                      FontSize="14"/>
+
+                                    <Span Text="&#x0a;" />
+                                    <Span Text="&#x0a;" />
+
+                                    <Span Text="CORREO ELECTRONICO: " 
+                                      FontSize="14"
+                                      FontAttributes="Bold"
+                                      FontFamily="Arial"/>
+                                    <Span Text="zmateolg39@gmail.com " 
+                                      FontSize="14"
+                                      FontFamily="Arial"/>
+
+
+                                    <Span Text="&#x0a;" />
+                                    <Span Text="&#x0a;" />
+
+
+
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label TextColor="Black"
+                           FontFamily="Arial"
+                           FontSize="Medium">
+
+                        </Label>
+                    </FlexLayout>
+
+
+                    <Image Source="logo_cecar"
+                       HeightRequest="90"
+                       WidthRequest="190"
+                       HorizontalOptions="Center"
+                       Margin="10,30"/>
+
+                </StackLayout>
+
+            </Grid>
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>
+    
